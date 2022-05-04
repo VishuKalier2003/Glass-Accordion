@@ -1,0 +1,209 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#background {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-image: linear-gradient(to bottom right, rgb(0, 184, 255), rgb(21, 0, 255), rgb(52, 69, 195), rgb(38, 71, 126), rgb(30, 34, 92));
+}
+
+@keyframes animate-cube1 {
+    0% {
+        top: 80vh;
+        left: 0;
+        transform: rotate(0deg);
+    }
+    50% {
+        top: 10vh;
+        left: 92%;
+        transform: rotate(180deg);
+    }
+    100% {
+        top: 80vh;
+        left: 0;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-cube2 {
+    0% {
+        top: 40vh;
+        left: 0;
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 80vh;
+        left: 45%;
+        transform: rotate(90deg);
+    }
+    50% {
+        top: 40vh;
+        left: 90%;
+        transform: rotate(180deg);
+    }
+    75% {
+        top: 0vh;
+        left: 40%;
+        transform: rotate(270deg);
+    }
+    100% {
+        top: 40vh;
+        left: 0%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-cube3 {
+    0% {
+        top: 0vh;
+        left: 5vw;
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 85vh;
+        left: 35vw;
+        transform: rotate(180deg);
+    }
+    50% {
+        top: 15vh;
+        left: 90vw;
+        transform: rotate(360deg);
+    }
+    75% {
+        top: 0vh;
+        left: 45vw;
+        transform: rotate(180deg);
+    }
+    100% {
+        top: 0vh;
+        left: 5vw;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-cube4 {
+    0% {
+        top: 0vh;
+        left: 40vw;
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 45vh;
+        left: 2vw;
+        transform: rotate(180deg);
+    }
+    50% {
+        top: 65vh;
+        left: 40vw;
+        transform: rotate(360deg);
+    }
+    75% {
+        top: 45vh;
+        left: 80vw;
+        transform: rotate(180deg);
+    }
+    100% {
+        top: 0vh;
+        left: 40vw;
+        transform: rotate(360deg);
+    }
+}
+
+.mirror-cube {
+    position: absolute;
+    outline: 2px double rgba(255, 255, 255, 0.4);
+    box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.3), -3px -3px 5px rgba(255, 255, 255, 0.5);
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+#cube1 {
+    height: 70px;
+    width: 70px;
+    animation: animate-cube1 10s linear infinite;
+}
+
+#cube2 {
+    height: 100px;
+    width: 100px;
+    animation: animate-cube2 12s linear infinite;
+}
+
+#cube3 {
+    height: 75px;
+    width: 75px;
+    animation: animate-cube3 6s linear infinite;
+}
+
+#cube4 {
+    height: 150px;
+    width: 150px;
+    animation: animate-cube4 18s linear infinite;
+}
+
+#queries {
+    position: absolute;
+    display: grid;
+    top: 50vh;
+    left: 15vw;
+    height: 80px;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 50px;
+    z-index: 5;
+}
+
+.query {
+    position: relative;
+    padding: 8px;
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    letter-spacing: 1px;
+    outline: 2px double rgba(255, 255, 255, 0.4);
+    transition-duration: 3s;
+    transition-delay: 0.2s;
+}
+
+.move-left {
+    transform: translateX(900px);
+    transition-duration: 3s;
+    transition-delay: 0.2s;
+}
+
+#solutions {
+    position: absolute;
+    display: grid;
+    top: 50vh;
+    left: 15vw;
+    height: 80px;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 50px;
+    z-index: 7;
+}
+
+.answer {
+    position: relative;
+    padding: 18px;
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    letter-spacing: 1px;
+    outline: 2px double rgba(255, 255, 255, 0.4);
+    transform: translateX(-900px);
+    transition-duration: 3s;
+    transition-delay: 0.2s;
+}
+
+.hover-btn {
+    position: relative;
+    outline: 2px double rgba(255, 255, 255, 0.4);
+    align-items: center;
+    border: none;
+    color: white;
+    background-image: linear-gradient(to top left, rgba(0, 184, 255, 0.6), rgba(21, 0, 255, 0.6), rgba(30, 24, 92, 0.6));
+    backdrop-filter: blur(5px);
+}
